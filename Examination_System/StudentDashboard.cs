@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Examination_System
 {
-    public partial class Form1 : Form
+    public partial class StudentDashboard : Form
     {
-        public Form1()
+        public StudentDashboard()
         {
             InitializeComponent();
         }
