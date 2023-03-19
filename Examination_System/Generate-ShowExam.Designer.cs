@@ -49,15 +49,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // instname
             // 
             this.instname.AutoSize = true;
             this.instname.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instname.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.instname.Location = new System.Drawing.Point(123, 27);
+            this.instname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.instname.Location = new System.Drawing.Point(103, 5);
             this.instname.Name = "instname";
             this.instname.Size = new System.Drawing.Size(94, 34);
             this.instname.TabIndex = 0;
@@ -67,8 +69,8 @@
             // 
             this.instadept.AutoSize = true;
             this.instadept.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instadept.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.instadept.Location = new System.Drawing.Point(147, 61);
+            this.instadept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.instadept.Location = new System.Drawing.Point(127, 47);
             this.instadept.Name = "instadept";
             this.instadept.Size = new System.Drawing.Size(58, 23);
             this.instadept.TabIndex = 1;
@@ -238,8 +240,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(23, 27);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(3, 5);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 34);
             this.label5.TabIndex = 15;
@@ -249,12 +251,26 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(23, 61);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(3, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 23);
             this.label6.TabIndex = 16;
             this.label6.Text = "Department :";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.instname);
+            this.panel1.Controls.Add(this.instadept);
+            this.panel1.Location = new System.Drawing.Point(26, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(287, 100);
+            this.panel1.TabIndex = 17;
             // 
             // Generate_ShowExam
             // 
@@ -262,8 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(904, 542);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tfno);
             this.Controls.Add(this.label3);
@@ -276,12 +291,12 @@
             this.Controls.Add(this.examlist);
             this.Controls.Add(this.showbutton);
             this.Controls.Add(this.genbutton);
-            this.Controls.Add(this.instadept);
-            this.Controls.Add(this.instname);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Name = "Generate_ShowExam";
             this.Text = "Generate_ShowExam";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +320,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
     }
 }

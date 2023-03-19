@@ -17,8 +17,7 @@ namespace Examination_System
         public Generate_ShowExam()
         {
             InitializeComponent();
-            //this.WindowState= FormWindowState.Maximized;
-            _instructor = Ent.Instructors.Find(1);
+            _instructor = Ent.Instructors.Find(3);
             instname.Text = _instructor.name;
             instadept.Text = _instructor.Department.name;
             UpdateList();
@@ -27,13 +26,16 @@ namespace Examination_System
         }
         public void UpdateList()
         {
+            examlist.Items.Clear();
+
             foreach (var exam in Ent.Exams)
             {
-                examlist.Items.Add(exam.id);
+                    examlist.Items.Add($"ID : {exam.id},Course : {exam.Course.name}");
             }
         }
         public void UpdateCourse()
         {
+            courselist.Items.Clear();
             foreach (var course in _instructor.Courses)
             {
                 courselist.Items.Add(course.name);
@@ -44,7 +46,7 @@ namespace Examination_System
         {
             if (examlist.SelectedItem != null)
             {
-                int examid = int.Parse(examlist.SelectedItem.ToString());
+                int examid = int.Parse(examlist.SelectedItem.ToString().Split(',')[0].Remove(0,5));
                 dataGridView1.DataSource = Ent.get_exam_questions_proc("C#", examid);
                 dataGridView1.Visible = true;
             }
@@ -75,7 +77,7 @@ namespace Examination_System
                         {
 
                             Ent.generate_exam(course.id, tf, mcq);
-                            MessageBox.Show($"An Exam has been generated for {course.name}");
+                            MessageBox.Show($"An Exam has been generated for Course : {course.name}");
                             UpdateList();
                             
                         }
