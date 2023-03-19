@@ -21,8 +21,9 @@ namespace Examination_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBox2.Text);
-            if (radioButtonStu.Checked == true)
+            int id = 0;
+
+            if (radioButtonStu.Checked == true && int.TryParse(textBox2.Text, out id))
             {
                 try
                 {
@@ -42,7 +43,7 @@ namespace Examination_System
                     ms.Show();
                 }
             }
-            else if (radioButtonIns.Checked == true)
+            else if (radioButtonIns.Checked == true && int.TryParse(textBox2.Text, out id))
             {
                 try
                 {
