@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,13 +16,8 @@ namespace Examination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LoginForm());
 
-            //TODO: UNCOMMENT BELOW LINE
-            //Application.Run(new LoginForm());
-
-            // TODO: REMOVE LINE BELOW
-            Application.Run(new InstructorDashboard(/*REPLACE 100 WITH LOGGED IN INSTURCTOR ID*/100));
-            // TODO: SHOW INSTURCTORDASHBOARD FORM FROM LOGINFORM WHEN IT IS READY
         }
     }
 }
