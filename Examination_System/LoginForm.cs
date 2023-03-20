@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -54,7 +55,8 @@ namespace Examination_System
                     {
                         InstructorDashboard i1 = new InstructorDashboard(ins);
                         i1.Show();
-                        this.Hide();
+                        Program.login.Hide();
+
                     }
                 }
                 catch

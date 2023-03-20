@@ -13,11 +13,11 @@ namespace Examination_System
     public partial class Generate_ShowExam : Form
     {
         Entities Ent = new Entities();
-        Instructor _instructor = new Instructor();
-        public Generate_ShowExam()
+        Instructor _instructor= new Instructor();
+        public Generate_ShowExam(Instructor _ins)
         {
             InitializeComponent();
-            _instructor = Ent.Instructors.Find(3);
+            _instructor = _ins;
             instname.Text = _instructor.name;
             instadept.Text = _instructor.Department.name;
             UpdateList();
