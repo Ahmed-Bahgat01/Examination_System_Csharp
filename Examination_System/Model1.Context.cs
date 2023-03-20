@@ -643,13 +643,22 @@ namespace Examination_System
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<select_Dept_Result>("select_Dept", idParameter);
         }
     
-        public virtual ObjectResult<select_instu_Result> select_instu(Nullable<int> id)
+        public virtual ObjectResult<Instructor> select_instu(Nullable<int> id)
         {
             var idParameter = id.HasValue ?
                 new ObjectParameter("id", id) :
                 new ObjectParameter("id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<select_instu_Result>("select_instu", idParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Instructor>("select_instu", idParameter);
+        }
+    
+        public virtual ObjectResult<Instructor> select_instu(Nullable<int> id, MergeOption mergeOption)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Instructor>("select_instu", mergeOption, idParameter);
         }
     
         public virtual ObjectResult<select_quest_Result> select_quest(Nullable<int> id)
