@@ -1122,7 +1122,7 @@
           <FunctionImport Name="select_Dept" ReturnType="Collection(Model.select_Dept_Result)">
             <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="select_instu" ReturnType="Collection(Model.select_instu_Result)">
+          <FunctionImport Name="select_instu" EntitySet="Instructors" ReturnType="Collection(Model.Instructor)">
             <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="select_quest" ReturnType="Collection(Model.select_quest_Result)">
@@ -1536,13 +1536,6 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="select_instu" FunctionName="Model.Store.select_instu">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="Model.select_instu_Result">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="fk_department" ColumnName="fk_department" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="select_quest" FunctionName="Model.Store.select_quest">
             <ResultMapping>
