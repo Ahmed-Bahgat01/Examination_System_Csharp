@@ -73,11 +73,20 @@
     <Compile Include="ExamForm.Designer.cs">
       <DependentUpon>ExamForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmationDialog.Designer.cs">
+      <DependentUpon>ConfirmationDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generate-ShowExam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Generate-ShowExam.Designer.cs">
       <DependentUpon>Generate-ShowExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="get_exam_questions_proc_Result1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -185,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="ExamForm.resx">
       <DependentUpon>ExamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmationDialog.resx">
+      <DependentUpon>ConfirmationDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Generate-ShowExam.resx">
       <DependentUpon>Generate-ShowExam.cs</DependentUpon>
