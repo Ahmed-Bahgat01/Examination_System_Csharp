@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +13,16 @@ namespace Examination_System
 {
     public partial class InstructorDashboard : Form
     {
+
         // FIELDS
         private Instructor LoggedInInstructor = null;
         Entities context = null;
 
         // CONSTRUCTORS
         public InstructorDashboard(int _instructorId)
+
+
+
         {
             InitializeComponent();
 

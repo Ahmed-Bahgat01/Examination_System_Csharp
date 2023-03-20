@@ -12,7 +12,7 @@ namespace Examination_System
 {
     public partial class StudentDashboard : Form
     {
-        public StudentDashboard()
+        public StudentDashboard(Student s)
         {
             InitializeComponent();
         }
