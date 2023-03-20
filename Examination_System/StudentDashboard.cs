@@ -27,10 +27,12 @@ namespace Examination_System
         }
         public void GradeList()
         {
+            ent = new Entities();
             listBox1.Items.Clear();
-            foreach (var item in student.Student_takes_exam)
+            Student std = ent.Students.Find(student.id);
+            foreach (var item in std.Student_takes_exam)
             {
-                listBox1.Items.Add($"Course : {item.Exam.Course.name}, Grade : {item.grade}");
+                listBox1.Items.Add($"Course : {item.Exam.Course.name},Exam ID: {item.fk_exam_id}, Grade : {item.grade}");
             }
         }
         public void CourseList()
@@ -53,13 +55,14 @@ namespace Examination_System
         {
             if (courselist.SelectedItem != null &&comboBox1.SelectedItem!=null)
             {
-                this.Close();
+                //this.Close();
                 string coursename = courselist.SelectedItem.ToString();
                 var exams = ent.Exams.Where(ex => ex.Course.name == coursename);
                 int examId = int.Parse(comboBox1.SelectedItem.ToString());
                 Exam exam = exams.Where(ex => ex.id == examId).FirstOrDefault();
                 ExamForm examForm = new ExamForm(exam, student);
-                examForm.Show();
+                examForm.ShowDialog();
+                GradeList();
             }
         }
 

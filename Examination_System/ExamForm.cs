@@ -107,10 +107,5 @@ namespace Examination_System
             tableLayoutPanel1.Visible = true;
             button2.Visible = false;
         }
-
-        private void ExamForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Program.login.Show();
-        }
     }
 }
