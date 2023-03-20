@@ -24,14 +24,20 @@ namespace Examination_System
         ConfirmationDialog confirmation=new ConfirmationDialog();
         Entities Ent=new Entities();
         List<get_exam_questions_proc_Result1> list = new List<get_exam_questions_proc_Result1>();
-        public ExamForm()
+        Exam _exam=new Exam();
+        Student _student = new Student();
+        public ExamForm(Exam exam,Student student)
         {
-            
-            foreach (var item in Ent.get_exam_questions_proc("C#", 1))
+            InitializeComponent();
+            studentlabel.Text = student.name.ToString();
+            courselabel.Text = exam.Course.name.ToString();
+            _exam=exam;
+            _student = student;
+            foreach (var item in Ent.get_exam_questions_proc("C#", exam.id))
             {
                 list.Add(item);
             }
-            InitializeComponent();
+            
             this.WindowState = FormWindowState.Maximized;
             int count = 0;
             foreach (Panel panel in tableLayoutPanel1.Controls)
@@ -71,13 +77,13 @@ namespace Examination_System
                             {
                                 if (list[count].question_type == "MCQ")
                                 {
-
-                                    Ent.Insert_StuQuestion(2, list[count].id, 1, ((MCQ)radiobutton.TabIndex).ToString());
+                                    
+                                    Ent.Insert_StuQuestion(_student.id, list[count].id, _exam.id, ((MCQ)radiobutton.TabIndex).ToString());
                                 }
                                 else
                                 {
 
-                                    Ent.Insert_StuQuestion(2, list[count].id, 1, radiobutton.Text);
+                                    Ent.Insert_StuQuestion(_student.id, list[count].id, _exam.id, radiobutton.Text);
                                 }
 
                             }
@@ -88,8 +94,10 @@ namespace Examination_System
                     count++;
 
                 }
-                Ent.ExamCorrection(1, 2);
+                Ent.ExamCorrection(_exam.id,_student.id);
                 button1.Enabled= false;
+                this.Close();
+                Program.login.Show();
             }
         }
 
@@ -98,6 +106,11 @@ namespace Examination_System
             button1.Visible = true;
             tableLayoutPanel1.Visible = true;
             button2.Visible = false;
+        }
+
+        private void ExamForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.login.Show();
         }
     }
 }

@@ -91,8 +91,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.studentlabel = new System.Windows.Forms.Label();
+            this.courselabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -846,25 +846,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label11
+            // studentlabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 18);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Student Name";
+            this.studentlabel.AutoSize = true;
+            this.studentlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentlabel.Location = new System.Drawing.Point(19, 9);
+            this.studentlabel.Name = "studentlabel";
+            this.studentlabel.Size = new System.Drawing.Size(114, 18);
+            this.studentlabel.TabIndex = 4;
+            this.studentlabel.Text = "Student Name";
             // 
-            // label12
+            // courselabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(19, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 15);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Course";
+            this.courselabel.AutoSize = true;
+            this.courselabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courselabel.Location = new System.Drawing.Point(19, 30);
+            this.courselabel.Name = "courselabel";
+            this.courselabel.Size = new System.Drawing.Size(52, 15);
+            this.courselabel.TabIndex = 5;
+            this.courselabel.Text = "Course";
             // 
             // ExamForm
             // 
@@ -872,13 +872,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1344, 749);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.courselabel);
+            this.Controls.Add(this.studentlabel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button1);
             this.Name = "ExamForm";
             this.Text = "ExamForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExamForm_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -969,7 +970,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label studentlabel;
+        private System.Windows.Forms.Label courselabel;
     }
 }

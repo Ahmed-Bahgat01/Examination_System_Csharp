@@ -35,7 +35,7 @@ namespace Examination_System
                     {
                         StudentDashboard s1 = new StudentDashboard(std);
                         s1.Show();
-                        this.Hide();
+                        Program.login.Hide();
                     }
                 }
                 catch
