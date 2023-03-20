@@ -167,8 +167,13 @@ namespace Examination_System
 
         private void OpenExamWizardBtn_Click(object sender, EventArgs e)
         {
-            Generate_ShowExam ExamWizrdForm = new Generate_ShowExam();
+            Generate_ShowExam ExamWizrdForm = new Generate_ShowExam(LoggedInInstructor);
             ExamWizrdForm.Show();
+        }
+
+        private void InstructorDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           Program.login.Show();
         }
     }
 }

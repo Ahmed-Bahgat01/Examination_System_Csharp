@@ -8,6 +8,7 @@ namespace Examination_System
 {
     internal static class Program
     {
+        static public LoginForm login;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,9 +17,8 @@ namespace Examination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
-
-            Application.Run(new LoginForm());
+            login = new LoginForm();
+            Application.Run(login);
 
         }
     }
