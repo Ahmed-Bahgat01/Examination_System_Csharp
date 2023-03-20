@@ -208,7 +208,7 @@
       <DependentUpon>Generate-ShowExam.cs</DependentUpon>
     <EmbeddedResource Include="InstructorDashboard.resx">
       <DependentUpon>InstructorDashboard.cs</DependentUpon>
-
+	</EmbeddedResource>
     <EmbeddedResource Include="DialogueBox.resx">
       <DependentUpon>DialogueBox.cs</DependentUpon>
     </EmbeddedResource>

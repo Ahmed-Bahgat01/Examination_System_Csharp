@@ -19,7 +19,7 @@ namespace Examination_System
         Entities context = null;
 
         // CONSTRUCTORS
-        public InstructorDashboard(int _instructorId)
+        public InstructorDashboard(Instructor _loggedInInstructor)
 
 
 
@@ -30,7 +30,7 @@ namespace Examination_System
             context = new Entities();
 
             // get LoggedInInstructor
-            LoggedInInstructor = context.select_instu(_instructorId).FirstOrDefault<Instructor>();
+            LoggedInInstructor = _loggedInInstructor;
 
             ShowInstructorData();
             FillCoursesComboBox();
@@ -165,14 +165,10 @@ namespace Examination_System
             }
         }
 
-        private void ShowExamBtn_Click(object sender, EventArgs e)
+        private void OpenExamWizardBtn_Click(object sender, EventArgs e)
         {
-            //TODO: TO BE LINKED WITH HESHAM FORM
-        }
-
-        private void GenerateExamBtn_Click(object sender, EventArgs e)
-        {
-            //TODO: TO BE LINKED WITH HESHAM FORM
+            Generate_ShowExam ExamWizrdForm = new Generate_ShowExam();
+            ExamWizrdForm.Show();
         }
     }
 }

@@ -30,8 +30,7 @@
         {
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.coursesComboBox = new System.Windows.Forms.ComboBox();
-            this.ShowExamBtn = new System.Windows.Forms.Button();
-            this.GenerateExamBtn = new System.Windows.Forms.Button();
+            this.OpenExamWizardBtn = new System.Windows.Forms.Button();
             this.StudentsGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,25 +81,15 @@
             this.coursesComboBox.TabIndex = 1;
             this.coursesComboBox.SelectedIndexChanged += new System.EventHandler(this.coursesComboBox_SelectedIndexChanged);
             // 
-            // ShowExamBtn
+            // OpenExamWizardBtn
             // 
-            this.ShowExamBtn.Location = new System.Drawing.Point(32, 308);
-            this.ShowExamBtn.Name = "ShowExamBtn";
-            this.ShowExamBtn.Size = new System.Drawing.Size(115, 23);
-            this.ShowExamBtn.TabIndex = 3;
-            this.ShowExamBtn.Text = "Show Exam";
-            this.ShowExamBtn.UseVisualStyleBackColor = true;
-            this.ShowExamBtn.Click += new System.EventHandler(this.ShowExamBtn_Click);
-            // 
-            // GenerateExamBtn
-            // 
-            this.GenerateExamBtn.Location = new System.Drawing.Point(32, 337);
-            this.GenerateExamBtn.Name = "GenerateExamBtn";
-            this.GenerateExamBtn.Size = new System.Drawing.Size(115, 23);
-            this.GenerateExamBtn.TabIndex = 4;
-            this.GenerateExamBtn.Text = "Generate Exam";
-            this.GenerateExamBtn.UseVisualStyleBackColor = true;
-            this.GenerateExamBtn.Click += new System.EventHandler(this.GenerateExamBtn_Click);
+            this.OpenExamWizardBtn.Location = new System.Drawing.Point(30, 317);
+            this.OpenExamWizardBtn.Name = "OpenExamWizardBtn";
+            this.OpenExamWizardBtn.Size = new System.Drawing.Size(130, 60);
+            this.OpenExamWizardBtn.TabIndex = 3;
+            this.OpenExamWizardBtn.Text = "Open Exam Wizard";
+            this.OpenExamWizardBtn.UseVisualStyleBackColor = true;
+            this.OpenExamWizardBtn.Click += new System.EventHandler(this.OpenExamWizardBtn_Click);
             // 
             // StudentsGridView
             // 
@@ -189,8 +178,7 @@
             // 
             this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.ExamsGridView);
-            this.groupBox3.Controls.Add(this.ShowExamBtn);
-            this.groupBox3.Controls.Add(this.GenerateExamBtn);
+            this.groupBox3.Controls.Add(this.OpenExamWizardBtn);
             this.groupBox3.Location = new System.Drawing.Point(427, 221);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(190, 403);
@@ -363,8 +351,7 @@
 
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.ComboBox coursesComboBox;
-        private System.Windows.Forms.Button ShowExamBtn;
-        private System.Windows.Forms.Button GenerateExamBtn;
+        private System.Windows.Forms.Button OpenExamWizardBtn;
         private System.Windows.Forms.DataGridView StudentsGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
