@@ -206,6 +206,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Generate-ShowExam.resx">
       <DependentUpon>Generate-ShowExam.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="InstructorDashboard.resx">
       <DependentUpon>InstructorDashboard.cs</DependentUpon>
 	</EmbeddedResource>
