@@ -300,19 +300,6 @@ namespace Examination_System
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_Course_Topics_Report_Result>("Get_Course_Topics_Report", crs_IdParameter);
         }
     
-        public virtual ObjectResult<get_exam_questions_proc_Result> get_exam_questions_proc(string referrer, Nullable<int> examId)
-        {
-            var referrerParameter = referrer != null ?
-                new ObjectParameter("Referrer", referrer) :
-                new ObjectParameter("Referrer", typeof(string));
-    
-            var examIdParameter = examId.HasValue ?
-                new ObjectParameter("ExamId", examId) :
-                new ObjectParameter("ExamId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_exam_questions_proc_Result>("get_exam_questions_proc", referrerParameter, examIdParameter);
-        }
-    
         public virtual ObjectResult<get_exam_with_stu_answer_proc_Result> get_exam_with_stu_answer_proc(string referrer, Nullable<int> examId, Nullable<int> studentId)
         {
             var referrerParameter = referrer != null ?
@@ -810,6 +797,19 @@ namespace Examination_System
                 new ObjectParameter("topic_course_id", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Topic_name_courseId_Update", top_idParameter, top_nameParameter, topic_course_idParameter);
+        }
+    
+        public virtual ObjectResult<get_exam_questions_proc_Result1> get_exam_questions_proc(string referrer, Nullable<int> examId)
+        {
+            var referrerParameter = referrer != null ?
+                new ObjectParameter("Referrer", referrer) :
+                new ObjectParameter("Referrer", typeof(string));
+    
+            var examIdParameter = examId.HasValue ?
+                new ObjectParameter("ExamId", examId) :
+                new ObjectParameter("ExamId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_exam_questions_proc_Result1>("get_exam_questions_proc", referrerParameter, examIdParameter);
         }
     }
 }
