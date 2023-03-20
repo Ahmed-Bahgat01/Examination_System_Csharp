@@ -20,9 +20,6 @@ namespace Examination_System
 
         // CONSTRUCTORS
         public InstructorDashboard(Instructor _loggedInInstructor)
-
-
-
         {
             InitializeComponent();
 
@@ -168,7 +165,11 @@ namespace Examination_System
         private void OpenExamWizardBtn_Click(object sender, EventArgs e)
         {
             Generate_ShowExam ExamWizrdForm = new Generate_ShowExam(LoggedInInstructor);
-            ExamWizrdForm.Show();
+            DialogResult dialogResult =  ExamWizrdForm.ShowDialog();
+            // update context
+            context = new Entities();
+            // updating datasource of exams gridview
+            ExamsGridView.DataSource = (coursesComboBox.SelectedItem as Course).Exams.ToList();
         }
 
         private void InstructorDashboard_FormClosed(object sender, FormClosedEventArgs e)
