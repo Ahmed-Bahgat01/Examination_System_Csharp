@@ -63,6 +63,16 @@ namespace Examination_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap instructor_led_training2 {
+            get {
+                object obj = ResourceManager.GetObject("instructor-led-training2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2023_03_20_at_10_21_22_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2023-03-20 at 10.21.22 PM", resourceCulture);
