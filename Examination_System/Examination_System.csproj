@@ -261,6 +261,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\instructor-led-training22.jpg" />
     <None Include="Resources\WhatsApp Image 2023-03-20 at 10.21.22 PM.jpeg" />
   </ItemGroup>
   <ItemGroup>
