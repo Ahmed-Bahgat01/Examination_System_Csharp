@@ -366,6 +366,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.coursesComboBox);
             this.Controls.Add(this.welcomeLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InstructorDashboard";
             this.Text = "InstructorDashboard";
